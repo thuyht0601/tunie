@@ -10,14 +10,13 @@ fetch('data/products.json')
   });
 
 // Thêm sự kiện khi người dùng thay đổi giá trị trong ô tìm kiếm
-document.getElementById('searchInput').addEventListener('input', function () {
-  searchProducts(this.value.trim());
-});
 
-// Thêm sự kiện khi người dùng nhấn nút lọc
-document.getElementById('filterButton').addEventListener('click', function () {
-  filterProducts();
-});
+const elSearch = document.getElementById('search');
+if (elSearch) {
+  elSearch.addEventListener('input', function () {
+    searchProducts(this.value.trim());
+  });
+}
 
 function addDataToHTML(products) {
   let listProductHTML = document.querySelector('.listProduct');
@@ -65,29 +64,6 @@ function searchProducts(searchTerm) {
   addDataToHTML(filteredProducts);
 }
 
-// Thêm sự kiện khi người dùng thay đổi giá trị trong dropdown loại sản phẩm
-document.getElementById('productTypeFilter').addEventListener('change', function () {
-  filterProducts();
-});
-
-function filterProducts() {
-  const criteria = document.getElementById('filterCriteria').value;
-  const minValue = parseFloat(document.getElementById('minValue').value);
-  const maxValue = parseFloat(document.getElementById('maxValue').value);
-  const productTypeFilter = document.getElementById('productTypeFilter').value;
-
-  const filteredProducts = products.filter(product => {
-    const price = parseFloat(product.price);
-    const meetsPriceCriteria = isNaN(price) || (price >= minValue && price <= maxValue);
-
-    const meetsTypeCriteria = (productTypeFilter === '' || product.type === productTypeFilter);
-
-    return meetsPriceCriteria && meetsTypeCriteria;
-  });
-
-  addDataToHTML(filteredProducts);
-}
-
 fetch('data/products.json')
     .then(response => response.json())
     .then(data => {
@@ -115,15 +91,13 @@ function showProducts() {
         <div class="price">
           <span class="original-price">${product.price}</span>
           <span class="discounted-price">${discountedPrice}VNĐ</span>
-        </div>
-        <a id="' + ${product.id} + '" type="submit" class="add-to-cart-button">Thêm vào giỏ hàng</a>`;
+        </div>`;
     } else {
       newProduct.innerHTML = 
         `<img src="${product.image}" alt="">
         <div class="discount-badge">${product.discount}%</div>
         <h2>${product.name}</h2>
-        <div class="price">${product.price}VNĐ</div>
-        <a id="' + ${product.id} + '" type="submit" class="add-to-cart-button">Thêm vào giỏ hàng</a>`;
+        <div class="price">${product.price}VNĐ</div>`;
     }
     listProduct.appendChild(newProduct);
   });
@@ -217,3 +191,65 @@ function updateShoppingCart() {
   shoppingCartContainer.appendChild(checkoutButton);
 }
 
+
+//
+// Hàm khởi tạo dữ liệu sản phẩm
+function initializeProducts() {
+  // Lấy dữ liệu từ file JSON hoặc từ API
+  fetch('data/products.json')
+    .then(response => response.json())
+    .then(data => {
+      products = data;
+    });
+}
+
+// Hàm lấy thông tin sản phẩm theo ID
+function getProductById(productId) {
+  return products.find(product => product.id === productId);
+}
+
+// Hàm cập nhật sản phẩm trong dữ liệu
+function updateProduct(product) {
+  const index = products.findIndex(p => p.id === product.id);
+  if (index !== -1) {
+    products[index] = product;
+  }
+}
+
+
+// Gọi hàm khởi tạo dữ liệu khi trang được load
+initializeProducts();
+
+// Hàm khi sản phẩm được click
+function onProductClick(productId) {
+  const product = getProductById(productId);
+  if (product) {
+    product.clicks = (product.clicks || 0) + 1;
+    updateProduct(product);
+  }
+}
+
+// Hàm khi sản phẩm được bán
+function onProductSold(productId, quantity, totalPrice) {
+  const product = getProductById(productId);
+  if (product) {
+    product.quantitySold = (product.quantitySold || 0) + quantity;
+    product.totalRevenue = (product.totalRevenue || 0) + totalPrice;
+    updateProduct(product);
+
+    // Lưu thông tin vào localStorage
+    saveTransactionInfo(productId, quantity, totalPrice);
+  }
+}
+
+// Hàm lưu thông tin giao dịch vào localStorage
+function saveTransactionInfo(productId, quantity, totalPrice) {
+  const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
+  transactions.push({
+    productId: productId,
+    quantity: quantity,
+    totalPrice: totalPrice,
+    timestamp: new Date().toISOString()
+  });
+  localStorage.setItem('transactions', JSON.stringify(transactions));
+}

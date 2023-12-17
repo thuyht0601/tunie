@@ -247,7 +247,6 @@ section {
     height: auto;
     background-size: cover;
     padding-top: 45rem;
-    /* padding-bottom: 10rem; */
 }
 
 .home .content {
@@ -660,4 +659,18 @@ section {
 
 .slider .dots li.active {
     width: 30px;
+}
+
+/*admin*/
+.admin-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+.admin-info {
+    margin-top: 20px;
 }
