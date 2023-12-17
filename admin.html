@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7.0.0/swiper-bundle.min.css" />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Icon -->
+    <link rel="icon" href="/img/logo.svg">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Title -->
+    <title>Tunie</title>
+</head>
+
+<body>
+    <!-- header section starts  -->
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i> Lunie Admin </a>
+
+        <nav class="navbar">
+            <a href="#home">Trang chủ</a>
+            <a href="#features">Thông tin khuyến mãi</a>
+            <a href="products.html">Sản phẩm</a>
+            <a href="#about">Về chúng tôi</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <a href="login.html">
+                <div class="fas fa-user" id="login-btn"></div>
+            </a>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="Tìm kiếm">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="image/cart-img-1.png" alt="">
+                <div class="content">
+                    <h3>watermelon</h3>
+                    <span class="price">$4.99/-</span>
+                    <span class="quantity">qty : 1</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="image/cart-img-2.png" alt="">
+                <div class="content">
+                    <h3>onion</h3>
+                    <span class="price">$4.99/-</span>
+                    <span class="quantity">qty : 1</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="image/cart-img-3.png" alt="">
+                <div class="content">
+                    <h3>chicken</h3>
+                    <span class="price">$4.99/-</span>
+                    <span class="quantity">qty : 1</span>
+                </div>
+            </div>
+            <div class="total"> total : $19.69/- </div>
+            <a href="#" class="btn">checkout</a>
+        </div>
+    </header>
+    <!-- header section ends -->
+
+    <!-- Slider -->
+    <section class="slider">
+        <div class="list">
+            <div class="item">
+                <img src="img/banner4.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="img/banner5.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="img/banner3.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="img/banner1.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- button prev and next -->
+        <div class="buttons">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+
+        <!-- dots -->
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+
+    <!-- features section starts  -->
+    <section class="features" id="features">
+
+        <h1 class="heading"><span>new arrivals</span></h1>
+
+
+    </section>
+    <!-- features section ends -->
+
+    <!-- products section starts  -->
+    <section class="features" id="features">
+
+        <h1 class="heading"><span>BEST-SELLING</span> </h1>
+    
+    
+    
+    </section>
+
+    <section class="features" id="features">
+
+        <h1 class="heading"><span>Sale Off</span> </h1>
+    
+    
+    
+    </section>
+    <!-- products section ends -->
+
+    <!-- footer section starts  -->
+    <section class="footer">
+        <div class="box-container">
+
+            <div class="box">
+                <img src="img/logoTunie.png">
+                <p> Ho Chi Minh City, VietNam</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +000-000-0000 </a>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +000-000-0000 </a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i> thuyht@gmail.com </a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Ho Chi Minh City,Viet Nam. </a>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <input type="email" placeholder="your email" class="email">
+                <input type="submit" value="subscribe" class="btn">
+                <img src="img/payment.png" class="payment-img" alt="">
+            </div>
+
+        </div>
+
+        <div class="credit"> created by <span> Huỳnh Thị Thúy </span> | all rights reserved </div>
+    </section>
+    <!-- footer section ends -->
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+    <script src="js/slide.js"></script>
+</body>
+
+</html>

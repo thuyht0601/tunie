@@ -1,0 +1,295 @@
+body {
+    margin: 0;
+    font-family: Poppins;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+.container {
+    width: 1300px;
+    margin: auto;
+    max-width: 90vw;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.title {
+    font-size: xx-large;
+    padding: 20px 0;
+    font-family: 'Playfair Display', serif;
+}
+
+.listProduct .item img {
+    width: 90%;
+}
+
+.listProduct {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.listProduct .item {
+    background-color: #ffd6be;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.listProduct .item h2 {
+    font-weight: 500;
+    font-size: large;
+}
+
+.listProduct .item .price {
+    /* letter-spacing: 7px; */
+    font-size: 16px;
+}
+
+/* detail page */
+
+.detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    text-align: left;
+}
+
+.detail .image img {
+    width: 100%;
+}
+
+.detail .image {
+    position: relative;
+}
+
+.detail .image::before {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    content: '';
+    background-color: #94817733;
+    z-index: -1;
+    border-radius: 190px 100px 170px 180px;
+    left: calc(50% - 150px);
+    top: 50px;
+
+}
+
+.detail .name {
+    font-size: xxx-large;
+    padding: 40px 0 0 0;
+    margin: 0 0 10px 0;
+}
+
+.detail .price {
+    font-weight: bold;
+    font-size: x-large;
+    /* letter-spacing: 7px; */
+    margin-bottom: 20px;
+}
+
+.detail .buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.detail .buttons button {
+    background-color: #eee;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    font-family: Poppins;
+    font-size: large;
+}
+
+.detail .buttons svg {
+    width: 15px;
+}
+
+.detail .buttons span {
+    background-color: #555454;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.detail .buttons button:nth-child(2) {
+    background-color: #2F2F2F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    box-shadow: 0 10px 20px #2F2F2F77;
+}
+
+.detail .description {
+    font-weight: 300;
+}
+
+.price {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    /* Hiệu ứng gạch ngang */
+    color: black;
+    font-size: 16px;
+    /* Màu chữ đen */
+}
+
+.discounted-price {
+    color: #1FB3C7;
+    font-size: 16px;
+    /* Màu chữ xanh */
+}
+
+.discount-badge {
+    background-color: #f5a3b7;
+    color: white;
+    font-weight: bold;
+    border-radius: 0px 36px 36px 0px;
+    width: 7rem;
+    font-size: 14px;
+    margin: 17px 17px;
+}
+
+.detail .discount-badge {
+    height: 20px;
+}
+
+.filter-container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    align-items: center;
+}
+
+.filter-container label {
+    margin-right: 10px;
+}
+
+.filter-container input,
+.filter-container select {
+    padding: 8px;
+    margin-right: 10px;
+}
+
+.filter-container button {
+    padding: 8px 12px;
+    background-color: #f5a3b7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 32px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.btnDatHang{
+    width: 7rem;
+    height: 2.4rem;
+    color: #0C713D;
+    text-decoration: none;
+    padding: .5rem;
+    background-color: #ff9698;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+}
+
+.btnDatHang:hover{
+    background-color: #130f40;
+}
+
+@media only screen and (max-width: 1600px) {
+    .listProduct {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .detail {
+        grid-template-columns: 40% 1fr;
+    }
+
+    .filter-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .filter-container button {
+        grid-column: 4;
+    }
+
+    .container {
+        width: 992px;
+    }
+}
+
+/* // ipad */
+@media only screen and (max-width: 992px) {
+    .listProduct {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .detail {
+        grid-template-columns: 40% 1fr;
+    }
+
+    .container {
+        width: 768px;
+    }
+}
+
+
+/* mobile */
+@media only screen and (max-width: 768px) {
+    .listProduct {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .detail {
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+
+    .detail .image img {
+        width: unset;
+        height: 40vh;
+    }
+
+    .detail .name {
+        font-size: x-large;
+        margin: 0;
+
+    }
+
+    .detail .buttons button {
+        font-size: small;
+    }
+
+    .detail .buttons {
+        justify-content: center;
+    }
+
+    .filter-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filter-container button {
+        grid-column: 2;
+    }
+}

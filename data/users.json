@@ -1,0 +1,32 @@
+[
+    {
+        "user_id":  1,
+        "fullName": "Huỳnh Thị Thúy",
+        "email": "huynhthuy@gmail.com",
+        "password": "123456"
+    },
+    {
+        "user_id":  2,
+        "fullName": "Huỳnh Thị Thúy",
+        "email": "huynhthuy1@gmail.com",
+        "password": "123456"
+    },
+    {
+        "user_id":  3,
+        "fullName": "Huỳnh Thị Thúy",
+        "email": "huynhthuy2@gmail.com",
+        "password": "123456"
+    },
+    {
+        "user_id":  4,
+        "fullName": "Huỳnh Thị Thúy",
+        "email": "huynhthuy3@gmail.com",
+        "password": "123456"
+    },
+    {
+        "user_id":  5,
+        "fullName": "Huỳnh Thị Thúy",
+        "email": "huynhthuy4@gmail.com",
+        "password": "123456"
+    }
+]

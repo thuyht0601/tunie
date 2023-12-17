@@ -1,0 +1,115 @@
+.total {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.btn-checkout {
+    display: block;
+    width: 100%;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-checkout:hover {
+    background-color: #218838;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.selected-products,
+.recommended-products {
+    margin-top: 20px;
+}
+
+.selected-products .box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.selected-products .box i {
+    margin: 8px;
+    color: #a32b2b;
+    cursor: pointer;
+    /* height: 48px; */
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.box i {
+    margin-right: 10px;
+    color: #dc3545;
+    cursor: pointer;
+}
+
+.selected-products .box img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.discount-code {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#discount {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #ff9698;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff9698;
+}
+
+#payment-success-message {
+    display: none;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#login-message {
+    text-align: center;
+    color: #dc3545; /* Màu đỏ */
+    font-size: 16px;
+    margin-top: 20px;
+  }

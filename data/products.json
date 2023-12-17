@@ -1,0 +1,209 @@
+[
+  {
+    "id": 1,
+    "name": "3CE BLUR MATTE LIPSTICK",
+    "brand": "3CE",
+    "type": "son",
+    "price": 300000,
+    "discount": 20,
+    "category": "New Arrivals",
+    "description": "A creamy rich lipstick formula with high colour payoff in a matte finish",
+    "image": "img/product/lipstick/lipstick1.jpg",
+    "weight": "100g",
+    "ingredients": ["Thành phần 1", "Thành phần 2"],
+    "rating": 4.5,
+    "reviews": [
+      { "user": "Người dùng 1", "comment": "Bình luận 1" },
+      { "user": "Người dùng 2", "comment": "Bình luận 2" }
+    ],
+    "quantity_available": 50,
+    "date_added": "2023-01-01",
+    "last_updated": "2023-01-15"
+  },
+  {
+    "id": 2,
+    "name": "BBIA L’EAU TINT",
+    "brand": "BBIA",
+    "type": "son",
+    "price": 150000,
+    "discount": 10,
+    "category": "Best-Selling",
+    "description": "1. Leau tint that is as light as water and becomes transparent the more you apply it comfortably. \n 2. The more you layer, the clearer and more transparent the watercolor color. \n 3. Light formulation full of moisture like water.",
+    "image": "img/product/lipstick/lipstick2.jpg",
+    "weight": "100g",
+    "ingredients": ["Thành phần 1", "Thành phần 2"],
+    "rating": 4.5,
+    "reviews": [
+      { "user": "Người dùng 1", "comment": "Bình luận 1" },
+      { "user": "Người dùng 2", "comment": "Bình luận 2" }
+    ],
+    "quantity_available": 50,
+    "date_added": "2023-01-01",
+    "last_updated": "2023-01-15"
+  },
+  {
+    "id": 3,
+    "name": "ARTIST CONCEALER PALETTE",
+    "brand": "kn",
+    "type": "Bảng che khuyết điểm",
+    "price": 150000,
+    "discount": 0,
+    "category": "Best-Selling",
+    "description": "Mô tả sản phẩm",
+    "image": "img/product/lipstick/lipstick3.jpg",
+    "weight": "100g",
+    "ingredients": ["Thành phần 1", "Thành phần 2"],
+    "rating": 4.5,
+    "reviews": [
+      { "user": "Người dùng 1", "comment": "Bình luận 1" },
+      { "user": "Người dùng 2", "comment": "Bình luận 2" }
+    ],
+    "quantity_available": 50,
+    "date_added": "2023-01-01",
+    "last_updated": "2023-01-15"
+  },
+  {
+    "id": 4,
+    "name": "3CE BLUR MATTE LIPSTICK",
+    "brand": "3CE",
+    "type": "son",
+    "price": 300000,
+    "discount": 90,
+    "category": "Sale Off",
+    "description": "Mô tả sản phẩm",
+    "image": "img/product/lipstick/lipstick4.jpg",
+    "weight": "100g",
+    "ingredients": ["Thành phần 1", "Thành phần 2"],
+    "rating": 4.5,
+    "reviews": [
+      { "user": "Người dùng 1", "comment": "Bình luận 1" },
+      { "user": "Người dùng 2", "comment": "Bình luận 2" }
+    ],
+    "quantity_available": 50,
+    "date_added": "2023-01-01",
+    "last_updated": "2023-01-15"
+  },
+  {
+    "id": 5,
+    "name": "TONE-UP CREAM",
+    "brand": "innisfree",
+    "type": "toner",
+    "price": 150000,
+    "discount": 90,
+    "category": "Sale Off",
+    "description": "Kem dưỡng dạng gel trong suốt innisfree Jeju Cherry Blossom Jelly Cream dưỡng ẩm sáng da từ hoa anh đào và Betaine tự nhiên, nhẹ nhàng và không gây nhờn rít.",
+    "image": "img/product/toner/toner1.jpg",
+    "weight": "100g",
+    "ingredients": ["Thành phần 1", "Thành phần 2"],
+    "rating": 4.5,
+    "reviews": [
+      { "user": "Người dùng 1", "comment": "Bình luận 1", "user_id" : 1},
+      { "user": "Người dùng 2", "comment": "Bình luận 2", "user_id" : 2 }
+    ],
+    "quantity_available": 50,
+    "date_added": "2023-01-01",
+    "last_updated": "2023-01-15"
+  },
+  {
+    "id": 6,
+    "name": "DASIQUE EYE PALETTE",
+    "brand": "Thương hiệu",
+    "type": "pm",
+    "price": 450000,
+    "discount": 0,
+    "description": "Mô tả sản phẩm",
+    "image": "img/product/eye_shadow/eyeShadow1.jpg",
+    "weight": "100g",
+    "ingredients": ["Thành phần 1", "Thành phần 2"],
+    "rating": 4.5,
+    "reviews": [
+      { "user": "Người dùng 1", "comment": "Bình luận 1" },
+      { "user": "Người dùng 2", "comment": "Bình luận 2" }
+    ],
+    "quantity_available": 50,
+    "date_added": "2023-01-01",
+    "last_updated": "2023-01-15"
+  },
+  {
+    "id": 7,
+    "name": "3CE BLUR MATTE LIPSTICK",
+    "brand": "Thương hiệu",
+    "type": "moisturizer",
+    "price": 300000,
+    "discount": 80,
+    "description": "Mô tả sản phẩm",
+    "image": "img/product/lipstick/lipstick1.jpg",
+    "weight": "100g",
+    "ingredients": ["Thành phần 1", "Thành phần 2"],
+    "rating": 4.5,
+    "reviews": [
+      { "user": "Người dùng 1", "comment": "Bình luận 1" },
+      { "user": "Người dùng 2", "comment": "Bình luận 2" }
+    ],
+    "quantity_available": 50,
+    "date_added": "2023-01-01",
+    "last_updated": "2023-01-15"
+  },
+  {
+    "id": 8,
+    "name": "3CE BLUR MATTE LIPSTICK",
+    "brand": "Thương hiệu",
+    "type": "moisturizer",
+    "price": 300000,
+    "discount": 80,
+    "category": "New Arrivals",
+    "description": "Mô tả sản phẩm",
+    "image": "img/product/lipstick/lipstick1.jpg",
+    "weight": "100g",
+    "ingredients": ["Thành phần 1", "Thành phần 2"],
+    "rating": 4.5,
+    "reviews": [
+      { "user": "Người dùng 1", "comment": "Bình luận 1" },
+      { "user": "Người dùng 2", "comment": "Bình luận 2" }
+    ],
+    "quantity_available": 50,
+    "date_added": "2023-01-01",
+    "last_updated": "2023-01-15"
+  },
+  {
+    "id": 9,
+    "name": "3CE BLUR MATTE LIPSTICK",
+    "brand": "Thương hiệu",
+    "type": "moisturizer",
+    "price": 300000,
+    "discount": 80,
+    "category": "New Arrivals",
+    "description": "Mô tả sản phẩm",
+    "image": "img/product/lipstick/lipstick1.jpg",
+    "weight": "100g",
+    "ingredients": ["Thành phần 1", "Thành phần 2"],
+    "rating": 4.5,
+    "reviews": [
+      { "user": "Người dùng 1", "comment": "Bình luận 1" },
+      { "user": "Người dùng 2", "comment": "Bình luận 2" }
+    ],
+    "quantity_available": 50,
+    "date_added": "2023-01-01",
+    "last_updated": "2023-01-15"
+  },
+  {
+    "id": 10,
+    "name": "3CE BLUR MATTE LIPSTICK",
+    "brand": "Thương hiệu",
+    "type": "moisturizer",
+    "price": 300000,
+    "discount": 10,
+    "description": "Mô tả sản phẩm",
+    "image": "img/product/lipstick/lipstick1.jpg",
+    "weight": "100g",
+    "ingredients": ["Thành phần 1", "Thành phần 2"],
+    "rating": 4.5,
+    "reviews": [
+      { "user": "Người dùng 1", "comment": "Bình luận 1" },
+      { "user": "Người dùng 2", "comment": "Bình luận 2" }
+    ],
+    "quantity_available": 50,
+    "date_added": "2023-01-01",
+    "last_updated": "2023-01-15"
+  }
+]

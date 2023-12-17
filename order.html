@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+    <!-- Icon -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="icon" href="/img/logo.svg">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/order.css">
+
+    <!-- Title -->
+    <title>Trang sản phẩm</title>
+</head>
+
+<body>
+    <!-- header section starts  -->
+    <header class="header">
+        <div>
+            <img class="logo" alt="" src="img/logo.svg">
+            <img class="logo" alt="" style="height: 30px" src="img/logoTunie.png">
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Trang chủ</a>
+            <a href="khuyenmai.html">Thông tin khuyến mãi</a>
+            <a href="products.html">Sản phẩm</a>
+            <a href="about.html">Về chúng tôi</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <a href="login.html">
+                <div class="fas fa-user" id="login-btn"></div>
+            </a>
+
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="Tìm kiếm">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <div class="shopping-cart">
+            <!-- Nội dung giỏ hàng sẽ được thêm vào đây bằng JavaScript -->
+        </div>
+    </header>
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3><span>L’OFFICIEL VIETNAM</span> products for your</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam libero nostrum veniam facere tempore
+                nisi.</p>
+            <a href="#body" class="btn">shop now</a>
+        </div>
+
+    </section>
+    <!-- home section ends -->
+
+    <!-- products section starts  -->
+    <section class="products">
+        <div class="container">
+            <h1>Sản phẩm bạn đã chọn</h1>
+            <div class="selected-products">
+                <!-- Nội dung sản phẩm đã chọn sẽ được thêm vào đây bằng JavaScript -->
+            </div>
+            <div class="discount-code">
+                <label for="discount">Mã giảm giá:</label>
+                <input type="text" id="discount" name="discount">
+                <button onclick="applyDiscount()">Áp dụng</button>
+            </div>
+
+            <div id="checkout-container">
+                <div id="login-message"></div>
+            </div>
+            <!-- <button onclick="processPayment()" class="btn-checkout">Thanh toán</button>
+            <div id="payment-success-message" style="display: none;">
+                <p>Thanh toán hoàn tất. Cảm ơn bạn đã mua hàng!</p>
+            </div> -->
+            <div class="recommended-products">
+                <h2>Sản phẩm gợi ý mua kèm</h2>
+                <!-- Nội dung sản phẩm gợi ý sẽ được thêm vào đây bằng JavaScript -->
+            </div>
+        </div>
+    </section>
+    <!-- products section ends -->
+
+    <section class="footer">
+        <div class="box-container">
+
+            <div class="box">
+                <img src="img/logoTunie.png">
+                <p> Ho Chi Minh City, VietNam</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +000-000-0000 </a>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +000-000-0000 </a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i> thuyht@gmail.com </a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Ho Chi Minh City,Viet Nam. </a>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <input type="email" placeholder="your email" class="email">
+                <input type="submit" value="subscribe" class="btn">
+                <img src="img/payment.png" class="payment-img" alt="">
+            </div>
+
+        </div>
+
+        <div class="credit"> created by <span> Huỳnh Thị Thúy </span> | all rights reserved </div>
+    </section>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+    <script src="js/order.js"></script>
+</body>
+
+</html>
