@@ -9,6 +9,21 @@ fetch('data/products.json')
         showDetail();
     })
 
+document.addEventListener('DOMContentLoaded', function () {
+    const trashIcons = document.querySelectorAll('.box i');
+    trashIcons.forEach(trashIcon => {
+        trashIcon.addEventListener('click', () => {
+            removeItemFromCart(trashIcon);
+            updateShoppingCart();
+            // showSelectedProducts();
+            checkLoginStatus();
+        });
+    });
+
+    // Gọi hàm cập nhật số lượng khi trang web được load
+    updateShoppingCart();
+});
+
 function showDetail() {
     // remove datas default from HTML
     let detail = document.querySelector('.detail');
@@ -40,7 +55,7 @@ function showDetail() {
     detail.querySelector('.description').innerText = thisProduct.description;
 
 
-    (products.filter(value => value.id != productId && value.type == thisProduct.type)).forEach(product => {
+    (products.filter(value => value.id !== productId && value.type === thisProduct.type)).forEach(product => {
         let newProduct = document.createElement('a');
         const discountedPrice = calculateDiscountedPrice(product.price, product.discount);
         newProduct.href = '/product_detail.html?id=' + product.id;
@@ -91,7 +106,7 @@ function addToCart(product) {
         // Nếu sản phẩm đã có trong giỏ hàng, tăng số lượng
         existingProduct.quantity++;
     } else {
-        const discountedPrice = 1;
+        let discountedPrice = 1;
         if (product.discount > 0) {
             discountedPrice = product.price - product.price * (product.discount/100)
         } else {
@@ -151,6 +166,13 @@ function updateShoppingCart() {
     checkoutButton.classList.add('btn');
     checkoutButton.innerText = 'Thanh toán';
     shoppingCartContainer.appendChild(checkoutButton);
+
+    // Cập nhật số lượng mặt hàng trong giỏ hàng
+    const cartItemCountElement = document.getElementById('cartItemCount');
+    if (cartItemCountElement) {
+        const cartItemCount = shoppingCart.reduce((acc, item) => acc + item.quantity, 0);
+        cartItemCountElement.innerText = cartItemCount.toString();
+    }
 }
 
 function calculateDiscountedPrice(originalPrice, discountPercentage) {
@@ -220,8 +242,7 @@ function addComment() {
 }
 
 function getCommentsFromLocalStorage(productId) {
-    const comments = JSON.parse(localStorage.getItem(`productComments_${productId}`)) || [];
-    return comments;
+    return JSON.parse(localStorage.getItem(`productComments_${productId}`)) || [];
 }
 
 function getProductIdFromUrl() {
@@ -239,8 +260,7 @@ function getCurrentTime() {
     const now = new Date();
     const hours = now.getHours().toString().padStart(2, '0');
     const minutes = now.getMinutes().toString().padStart(2, '0');
-    const timeString = `${hours}:${minutes}`;
-    return timeString;
+    return `${hours}:${minutes}`;
 }
 
 

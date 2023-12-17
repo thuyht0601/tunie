@@ -131,5 +131,3 @@ function createProductElement(product) {
 
     return productElement;
 }
-
-
