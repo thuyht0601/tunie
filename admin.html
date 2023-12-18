@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +15,7 @@
 
     <!-- Css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
 
     <!-- Title -->
     <title>Tunie</title>
@@ -50,15 +52,19 @@
 
     <!-- body -->
     <section class="body">
-        <div class="admin-container">
-            <h1>Trang Admin</h1>
-            <div class="admin-info">
-                <p>Tổng doanh thu: <span id="totalRevenue">$0.00</span></p>
-                <p>Tổng số lượt xem sản phẩm: <span id="totalViews">0</span></p>
-                <p>Tổng số lượt click trang: <span id="totalClicks">0</span></p>
-                <p>Tổng số sản phẩm đã bán: <span id="totalSold">0</span></p>
+        <div class="box-container">
+            <div class="box">
+                <h1 class="heading"><span>Admin Thống kê</span></h1>
+                <div id="totalRevenue">
+                    <!-- Placeholder for total revenue -->
+                </div>
+                <div id="transactionList">
+                    <!-- Placeholder for transaction list -->
+                </div>
+                
             </div>
         </div>
+        
     </section>
     <!-- products section ends -->
 
@@ -100,9 +106,9 @@
     <!-- footer section ends -->
 
     <!-- custom js file link  -->
-    <script src="js/script.js"></script>
-    <script src="js/slide.js"></script>
-<script src="js/admin.js"></script>
+    <script src="static/script.js"></script>
+    <script src="static/slide.js"></script>
+    <script src="static/admin.js"></script>
 </body>
 
 </html>
