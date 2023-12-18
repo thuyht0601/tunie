@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
             removeItemFromCart(trashIcon);
             updateShoppingCart();
             // showSelectedProducts();
-            checkLoginStatus();
+            // checkLoginStatus();
         });
     });
 
     // Gọi hàm cập nhật số lượng khi trang web được load
-    updateShoppingCart();
+    // updateShoppingCart();
 });
 
 function showDetail() {
@@ -32,7 +32,7 @@ function showDetail() {
     let thisProduct = products.filter(value => value.id == productId)[0];
     //if there is no product with id = productId => return to home page
     if (!thisProduct) {
-        window.location.href = "/";
+        window.location.href = "/tunie_v1.0/";
     }
 
     detail.querySelector('.image img').src = thisProduct.image;
@@ -58,7 +58,7 @@ function showDetail() {
     (products.filter(value => value.id !== productId && value.type === thisProduct.type)).forEach(product => {
         let newProduct = document.createElement('a');
         const discountedPrice = calculateDiscountedPrice(product.price, product.discount);
-        newProduct.href = '/product_detail.html?id=' + product.id;
+        newProduct.href = '/tunie_v1.0/product_detail.html?id=' + product.id;
         newProduct.classList.add('item');
         if (product.discount > 0) {
             newProduct.innerHTML =
@@ -77,6 +77,8 @@ function showDetail() {
                 <div class="price">${product.price}VNĐ</div>`;
         }
         listProduct.appendChild(newProduct);
+
+        // onProductClick(product.id);
     });
 
     const addToCartButton = document.querySelector('.add-to-cart-button');
@@ -88,7 +90,10 @@ function showDetail() {
     thisProduct.reviews.forEach(comment => {
         const listItem = document.createElement('li');
         listItem.innerHTML = `<strong>${comment.user}:</strong> ${comment.comment}`;
-        commentList.appendChild(listItem);
+        if (commentList) {
+
+            commentList.appendChild(listItem);
+        }
     });
 }
 
@@ -162,7 +167,7 @@ function updateShoppingCart() {
 
     // Hiển thị nút thanh toán
     const checkoutButton = document.createElement('a');
-    checkoutButton.href = '/order.html';
+    checkoutButton.href = '/tunie_v1.0/order.html';
     checkoutButton.classList.add('btn');
     checkoutButton.innerText = 'Thanh toán';
     shoppingCartContainer.appendChild(checkoutButton);
@@ -182,7 +187,7 @@ function calculateDiscountedPrice(originalPrice, discountPercentage) {
 
 function goBack() {
     // Chuyển hướng về trang danh sách sản phẩm (index.html)
-    window.location.href = "/products.html";
+    window.location.href = "/tunie_v1.0/products.html";
 }
 
 
@@ -263,4 +268,25 @@ function getCurrentTime() {
     return `${hours}:${minutes}`;
 }
 
+// Hàm cập nhật sản phẩm trong dữ liệu
+function updateProduct(product) {
+    const index = products.findIndex(p => p.id === product.id);
+    if (index !== -1) {
+        products[index] = product;
+        localStorage.setItem('products', JSON.stringify(products));
+    }
+}
+
+
+// Gọi hàm khởi tạo dữ liệu khi trang được load
+// initializeProducts();
+
+// Hàm khi sản phẩm được click
+function onProductClick(productId) {
+    const product = getProductById(productId);
+    if (product) {
+        product.clicks = (product.clicks || 0) + 1;
+        updateProduct(product);
+    }
+}
 

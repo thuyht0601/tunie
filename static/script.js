@@ -1,9 +1,9 @@
 let searchForm = document.querySelector('.search-form');
-
+// let loginForm = document.querySelector('.login-form');
 document.querySelector('#search-btn').onclick = () => {
     searchForm.classList.toggle('active');
     shoppingCart.classList.remove('active');
-    loginForm.classList.remove('active');
+    // loginForm.classList.remove('active');
     navbar.classList.remove('active');
 }
 
@@ -12,14 +12,14 @@ let shoppingCart = document.querySelector('.shopping-cart');
 document.querySelector('#cart-btn').onclick = () => {
     shoppingCart.classList.toggle('active');
     searchForm.classList.remove('active');
-    loginForm.classList.remove('active');
+    // loginForm.classList.remove('active');
     navbar.classList.remove('active');
 }
 
-let loginForm = document.querySelector('.login-form');
+
 
 document.querySelector('#login-btn').onclick = () => {
-    loginForm.classList.toggle('active');
+    // loginForm.classList.toggle('active');
     searchForm.classList.remove('active');
     shoppingCart.classList.remove('active');
     navbar.classList.remove('active');
@@ -31,7 +31,7 @@ document.querySelector('#menu-btn').onclick = () => {
     navbar.classList.toggle('active');
     searchForm.classList.remove('active');
     shoppingCart.classList.remove('active');
-    loginForm.classList.remove('active');
+    // loginForm.classList.remove('active');
 }
 
 window.onscroll = () => {
@@ -44,12 +44,14 @@ document.addEventListener('DOMContentLoaded', function () {
     updateShoppingCart();
     const trashIcons = document.querySelectorAll('.box i');
     trashIcons.forEach(trashIcon => {
-        trashIcon.addEventListener('click', () => {
-            removeItemFromCart(trashIcon);
-            updateShoppingCart();
-            // showSelectedProducts();
-            // checkLoginStatus();
-        });
+        if (trashIcon) {
+            trashIcon.addEventListener('click', () => {
+                removeItemFromCart(trashIcon);
+                updateShoppingCart();
+                // showSelectedProducts();
+                // checkLoginStatus();
+            });
+        }
     });
 });
 
@@ -86,7 +88,7 @@ function updateShoppingCart() {
 
     // Hiển thị nút thanh toán
     const checkoutButton = document.createElement('a');
-    checkoutButton.href = '/order.html';
+    checkoutButton.href = '/tunie_v1.0/order.html';
     checkoutButton.classList.add('btn');
     checkoutButton.innerText = 'Thanh toán';
     shoppingCartContainer.appendChild(checkoutButton);
@@ -109,7 +111,10 @@ function displayProductsByCategory(containerId, products, category) {
     if (categoryProducts.length > 0) {
         categoryProducts.forEach(product => {
             const productElement = createProductElement(product);
-            container.appendChild(productElement);
+            if (container) {
+
+                container.appendChild(productElement);
+            }
         });
     } else {
         container.innerHTML = '<p>No products available in this category.</p>';
@@ -130,4 +135,9 @@ function createProductElement(product) {
     `;
 
     return productElement;
+}
+
+function calculateDiscountedPrice(originalPrice, discountPercentage) {
+    const discountAmount = (originalPrice * discountPercentage) / 100;
+    return (originalPrice - discountAmount);
 }

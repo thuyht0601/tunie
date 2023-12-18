@@ -98,12 +98,17 @@ if (localStorage.getItem('Account') !== null) {
 }
 
 DomID('btn-DangNhap').addEventListener('click', () => {
-
+    // console.log(arrTaiKhoan)
+    if (localStorage.getItem('Account') !== null) {
+        luuTruTaiKhoan = JSON.parse(localStorage.getItem('Account'))
+        arrTaiKhoan.push(luuTruTaiKhoan)
+        console.log(arrTaiKhoan)
+    }
     var emailDangNhap = DomID('inputEmail').value
     var passDangNhap = DomID('inputPassword').value
-
-    var accountCheck = arrTaiKhoan.find(({ email }) => email === emailDangNhap)
-    console.log(accountCheck)
+    // var accountData = JSON.parse(localStorage.getItem('Account'))
+    var accountCheck = arrTaiKhoan.find(({email}) => email === emailDangNhap)
+    
 
     if (accountCheck === undefined) {
         DomID('modal').setAttribute('style', 'opacity: 1; visibility: visible;')
